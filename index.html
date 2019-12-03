@@ -1,1 +1,41 @@
-<h1>DANIEL</h1>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>The Materialize Tabs Example</title>
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
+    <script rel="stylesheet" href="./css/style.css"></script>
+</head>
+
+<body class="container">
+    <h1 class="center-align">
+        Daniel Pereira Zitei
+    </h1>
+    <h2 class="center-align">
+        Cientista de Dados
+    </h2>
+
+    <div class="row">
+        <div class="col s12">
+            <ul class="tabs grey darken-4">
+                <li class="tab col s3"><a class="white-text" href="#inbox">Quem sou eu?</a></li>
+                <li class="tab col s3"><a class="white-text" class="active" href="#unread">
+                  Currículo</a></li>
+                <li class="tab col s3"><a class="white-text" href="#outbox">
+                  Projetos</a></li>
+                <li class="tab col s3"><a class="white-text" href="#sent">Contato</a></li>
+            </ul>
+        </div>
+
+        <div id="inbox" class="col s12">Inbox</div>
+        <div id="unread" class="col s12">Unread</div>
+        <div id="outbox" class="col s12">Outbox (Disabled)</div>
+        <div id="sent" class="col s12">Sent</div>
+    </div>
+</body>
+
+</html>
