@@ -4,38 +4,144 @@
 <head>
     <title>The Materialize Tabs Example</title>
     <meta name="viewport" content="width = device-width, initial-scale = 1">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js"></script>
-    <script rel="stylesheet" href="./css/style.css"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://d3js.org/d3.v5.js"></script>
+    <script src="/js/CodeFlower.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <script>
+        $(document).ready(function() {
+            $("#cabecalho").hide();
+            $("#link1").click(function() {
+                $("#cabecalho").slideUp('slow');
+            });
+            $("#link2").click(function() {
+                $("#cabecalho").slideDown('slow');
+            });
+            $("#link3").click(function() {
+                $("#cabecalho").slideDown('slow');
+            });
+            $("#link4").click(function() {
+                $("#cabecalho").slideDown('slow');
+            });
+        });
+    </script>
 </head>
 
-<body class="container">
-    <h1 class="center-align">
-        Daniel Pereira Zitei
-    </h1>
-    <h2 class="center-align">
-        Cientista de Dados
-    </h2>
-
-    <div class="row">
-        <div class="col s12">
-            <ul class="tabs grey darken-4">
-                <li class="tab col s3"><a class="white-text" href="#inbox">Quem sou eu?</a></li>
-                <li class="tab col s3"><a class="white-text" class="active" href="#unread">
-                  Currículo</a></li>
-                <li class="tab col s3"><a class="white-text" href="#outbox">
-                  Projetos</a></li>
-                <li class="tab col s3"><a class="white-text" href="#sent">Contato</a></li>
-            </ul>
-        </div>
-
-        <div id="inbox" class="col s12">Inbox</div>
-        <div id="unread" class="col s12">Unread</div>
-        <div id="outbox" class="col s12">Outbox (Disabled)</div>
-        <div id="sent" class="col s12">Sent</div>
+<body class="container pt-5">
+    <div id="cabecalho">
+        <h1 class="text-center">
+            Daniel Pereira Zitei
+        </h1>
+        <h2 class="text-center">
+            Data Scientist
+        </h2>
     </div>
+    <ul id="menu" class="nav nav-tabs mt-5" role="tablist">
+        <li id="link1" class="nav-item"><a class="nav-link active" data-toggle="tab" href="#home">Home</a></li>
+        <li id="link2" class="nav-item"><a class="nav-link" data-toggle="tab" href="#menu1">Menu 1</a></li>
+        <li id="link3" class="nav-item"><a class="nav-link" data-toggle="tab" href="#menu2">Menu 2</a></li>
+        <li id="link4" class="nav-item"><a class="nav-link" data-toggle="tab" href="#menu3">Menu 3</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="home" class="tab-pane fade show  active" role="tabpanel" aria-labelledby="home-tab">
+            <div class="grid mt-5">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="img/eu.jpg" class="img-thumbnail">
+                    </div>
+                    <div class="col-md-7">
+                        <h3>Daniel Pereira Zitei</h3>
+                        <h4>Data Scientist</h4>
+                        <p>I was born in Santos on march 24, 1996, I'm graduating from <strong>FATEC-RL</strong> in Internet Systems and currently work as a data scientist. I love read about <strong>science fiction</strong>, <strong>new tecnologies</strong>                            and <strong>artificial inteligence</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="menu1" class="tab-pane fade">
+            <h3>Menu 1</h3>
+            <div id="visualization"></div>
+        </div>
+        <div id="menu2" class="tab-pane fade">
+            <h3>Menu 2</h3>
+            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+        </div>
+        <div id="menu3" class="tab-pane fade">
+            <h3>Menu 3</h3>
+            <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        </div>
+    </div>
+    </div>
+    <script type="text/javascript" src="js/d3/d3.js"></script>
+    <script type="text/javascript" src="js/d3/d3.geom.js"></script>
+    <script type="text/javascript" src="js/d3/d3.layout.js"></script>
+    <script type="text/javascript" src="js/d3/CodeFlower.js"></script>
+    <script>
+        $.myFlower = new CodeFlower("#visualization", 500, 500);
+        jsonData = {
+            "name": "Knowledges",
+            "children": [{
+                "name": "Cloud",
+                "size": 40,
+                "children": [{
+                    "name": "Amazon Cloud",
+                    "size": 40
+                }, {
+                    "name": "Azure Cloud",
+                    "size": 40
+                }, {
+                    "name": "Functions",
+                    "size": 40
+                }, {
+                    "name": "Storages",
+                    "size": 40
+                }, {
+                    "name": "DataBricks",
+                    "size": 40
+                }]
+            }, {
+                "name": "Python",
+                "size": 40,
+                "children": [{
+                    "name": "Jupyter",
+                    "size": 40
+                }, {
+                    "name": "Pandas",
+                    "size": 40
+                }, {
+                    "name": "PySpark",
+                    "size": 40
+                }, {
+                    "name": "Scikit-Learn",
+                    "size": 40
+                }, {
+                    "name": "Keras",
+                    "size": 40
+                }, {
+                    "name": "Tensorflow",
+                    "size": 40
+                }, {
+                    "name": "Flask",
+                    "size": 40
+                }, {
+                    "name": "Kafka",
+                    "size": 40
+                }, {
+                    "name": "Scrapy",
+                    "size": 40
+                }, {
+                    "name": "Requests",
+                    "size": 40
+                }]
+            }],
+            "nbFiles": 81,
+            "size": 9000
+        }
+        $.myFlower.update(jsonData);
+    </script>
 </body>
 
 </html>
