@@ -2,14 +2,12 @@
 <html>
 
 <head>
-    <title>The Materialize Tabs Example</title>
+    <title>Daniel Zitei - Portifolio</title>
     <meta name="viewport" content="width = device-width, initial-scale = 1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="https://d3js.org/d3.v5.js"></script>
-    <script src="/js/CodeFlower.js"></script>
     <link rel="stylesheet" href="./css/style.css">
     <script>
         $(document).ready(function() {
@@ -40,10 +38,10 @@
         </h2>
     </div>
     <ul id="menu" class="nav nav-tabs mt-5" role="tablist">
-        <li id="link1" class="nav-item"><a class="nav-link active" data-toggle="tab" href="#home">Home</a></li>
-        <li id="link2" class="nav-item"><a class="nav-link" data-toggle="tab" href="#menu1">Menu 1</a></li>
-        <li id="link3" class="nav-item"><a class="nav-link" data-toggle="tab" href="#menu2">Menu 2</a></li>
-        <li id="link4" class="nav-item"><a class="nav-link" data-toggle="tab" href="#menu3">Menu 3</a></li>
+        <li id="link1" class="nav-item"><a class="nav-link  active" data-toggle="tab" href="#home">Home</a></li>
+        <li id="link2" class="nav-item"><a class="nav-link " data-toggle="tab" href="#menu1">Skills</a></li>
+        <li id="link3" class="nav-item"><a class="nav-link " data-toggle="tab" href="#menu2">Projects</a></li>
+        <li id="link4" class="nav-item"><a class="nav-link " data-toggle="tab" href="#menu3">Contact</a></li>
     </ul>
 
     <div class="tab-content">
@@ -62,8 +60,11 @@
             </div>
         </div>
         <div id="menu1" class="tab-pane fade">
-            <h3>Menu 1</h3>
-            <div id="visualization"></div>
+            <h3>Skills</h3>
+            <div class="text-center col-md-12 svg-container overflow-auto">
+                <svg width="500" height="500"></svg>
+            </div>
+
         </div>
         <div id="menu2" class="tab-pane fade">
             <h3>Menu 2</h3>
@@ -71,76 +72,123 @@
         </div>
         <div id="menu3" class="tab-pane fade">
             <h3>Menu 3</h3>
-            <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
         </div>
     </div>
     </div>
-    <script type="text/javascript" src="js/d3/d3.js"></script>
-    <script type="text/javascript" src="js/d3/d3.geom.js"></script>
-    <script type="text/javascript" src="js/d3/d3.layout.js"></script>
-    <script type="text/javascript" src="js/d3/CodeFlower.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
     <script>
-        $.myFlower = new CodeFlower("#visualization", 500, 500);
-        jsonData = {
-            "name": "Knowledges",
-            "children": [{
-                "name": "Cloud",
-                "size": 40,
-                "children": [{
-                    "name": "Amazon Cloud",
-                    "size": 40
-                }, {
-                    "name": "Azure Cloud",
-                    "size": 40
-                }, {
-                    "name": "Functions",
-                    "size": 40
-                }, {
-                    "name": "Storages",
-                    "size": 40
-                }, {
-                    "name": "DataBricks",
-                    "size": 40
-                }]
-            }, {
-                "name": "Python",
-                "size": 40,
-                "children": [{
-                    "name": "Jupyter",
-                    "size": 40
-                }, {
-                    "name": "Pandas",
-                    "size": 40
-                }, {
-                    "name": "PySpark",
-                    "size": 40
-                }, {
-                    "name": "Scikit-Learn",
-                    "size": 40
-                }, {
-                    "name": "Keras",
-                    "size": 40
-                }, {
-                    "name": "Tensorflow",
-                    "size": 40
-                }, {
-                    "name": "Flask",
-                    "size": 40
-                }, {
-                    "name": "Kafka",
-                    "size": 40
-                }, {
-                    "name": "Scrapy",
-                    "size": 40
-                }, {
-                    "name": "Requests",
-                    "size": 40
-                }]
-            }],
-            "nbFiles": 81,
-            "size": 9000
-        }
-        $.myFlower.update(jsonData);
+        var svg = d3.select("svg"),
+            margin = 20,
+            diameter = +svg.attr("width"),
+            w = window,
+            d = document,
+            e = d.documentElement,
+            f = d.getElementsByTagName('body')[0],
+            x = w.innerWidth || e.clientWidth || f.clientWidth,
+            y = w.innerHeight || e.clientHeight || f.clientHeight,
+            g = svg.append("g").attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")");
+
+
+        var color = d3.scaleLinear()
+            .domain([-1, 5])
+            .range(["hsl(206,85%,43%)", "hsl(183,48%,96%)"])
+            .interpolate(d3.interpolateHcl);
+
+        var pack = d3.pack()
+            .size([diameter - margin, diameter - margin])
+            .padding(2);
+
+        d3.json("data.json", function(error, root) {
+            if (error) throw error;
+
+            root = d3.hierarchy(root)
+                .sum(function(d) {
+                    return d.size;
+                })
+                .sort(function(a, b) {
+                    return b.value - a.value;
+                });
+
+            var focus = root,
+                nodes = pack(root).descendants(),
+                view;
+
+            var circle = g.selectAll("circle")
+                .data(nodes)
+                .enter().append("circle")
+                .attr("class", function(d) {
+                    return d.parent ? d.children ? "node" : "node node--leaf" : "node node--root";
+                })
+                .style("fill", function(d) {
+                    return d.children ? color(d.depth) : null;
+                })
+                .on("click", function(d) {
+                    if (focus !== d) zoom(d), d3.event.stopPropagation();
+                });
+
+            var text = g.selectAll("text")
+                .data(nodes)
+                .enter().append("text")
+                .attr("class", "label")
+                .style("fill-opacity", function(d) {
+                    return d.parent === root ? 1 : 0;
+                })
+                .style("display", function(d) {
+                    return d.parent === root ? "inline" : "none";
+                })
+                .text(function(d) {
+                    return d.data.name;
+                });
+
+            var node = g.selectAll("circle,text");
+
+            svg
+                .style("background", color(-1))
+                .on("click", function() {
+                    zoom(root);
+                });
+
+            zoomTo([root.x, root.y, root.r * 2 + margin]);
+
+            function zoom(d) {
+                var focus0 = focus;
+                focus = d;
+
+                var transition = d3.transition()
+                    .duration(d3.event.altKey ? 7500 : 750)
+                    .tween("zoom", function(d) {
+                        var i = d3.interpolateZoom(view, [focus.x, focus.y, focus.r * 2 + margin]);
+                        return function(t) {
+                            zoomTo(i(t));
+                        };
+                    });
+
+                transition.selectAll("text")
+                    .filter(function(d) {
+                        return d.parent === focus || this.style.display === "inline";
+                    })
+                    .style("fill-opacity", function(d) {
+                        return d.parent === focus ? 1 : 0;
+                    })
+                    .on("start", function(d) {
+                        if (d.parent === focus) this.style.display = "inline";
+                    })
+                    .on("end", function(d) {
+                        if (d.parent !== focus) this.style.display = "none";
+                    });
+            }
+
+            function zoomTo(v) {
+                var k = diameter / v[2];
+                view = v;
+                node.attr("transform", function(d) {
+                    return "translate(" + (d.x - v[0]) * k + "," + (d.y - v[1]) * k + ")";
+                });
+                circle.attr("r", function(d) {
+                    return d.r * k;
+                });
+            }
+        });
     </script>
 </body>
 
