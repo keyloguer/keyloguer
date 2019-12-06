@@ -1,78 +1,153 @@
 {
     "name": "Me",
-    "children": [{
-        "name": "Computer Knowledges",
-        "children": [{
-            "name": "Cloud",
-            "size": 40,
+    "children": 
+    [
+        {
+            "name": "Computer Knowledges",
+            "children": [
+                {
+                    "name": "Cloud",
+                    "size": 40,
+                    "children": 
+                    [   {
+                            "name": "Amazon Cloud",
+                            "size": 80
+                        }, {
+                            "name": "Azure Cloud",
+                            "size": 80
+                        }, {
+                            "name": "Functions",
+                            "size": 60
+                        }, {
+                            "name": "Storages",
+                            "size": 60
+                        }, {
+                            "name": "DataBricks",
+                            "size": 60
+                        },
+                        {
+                            "name": "Kubernetes",
+                            "size": 60
+                        }
+                    ]
+                }, {
+                    "name": "General Knowledges",
+                    "size": 40,
+                    "children": [{
+                            "name": "Docker",
+                            "size": 40
+                        },{
+                            "name": "Faas",
+                            "size": 40
+                        },{
+                            "name": "Saas",
+                            "size": 40
+                        },{
+                            "name": "Paas",
+                            "size": 40
+                        },{
+                            "name": "Statistics",
+                            "size": 40
+                        },{
+                            "name": "Linux",
+                            "size": 40
+                        },{
+                            "name": "Star Schema Modeling",
+                            "size": 200
+                        }
+
+                    ]   
+                }, {
+                    "name": "Databases",
+                    "size": 40,
+                    "children": [{
+                            "name": "Hadoop",
+                            "size": 40
+                        },{
+                            "name": "Postgres",
+                            "size": 40
+                        },{
+                            "name": "Oracle",
+                            "size": 40
+                        },{
+                            "name": "MongoDB",
+                            "size": 40
+                        },{
+                            "name": "SQLite",
+                            "size": 40
+                        },{
+                            "name": "Linux",
+                            "size": 40
+                        }
+
+                    ]   
+                }, {
+                    "name": "Python",
+                    "size": 40,
+                    "children": [
+                        {
+                            "name": "Jupyter",
+                            "size": 40
+                        }, {
+                            "name": "Pandas",
+                            "size": 40
+                        }, {
+                            "name": "PySpark",
+                            "size": 80
+                        }, {
+                            "name": "Scikit-Learn",
+                            "size": 100
+                        }, {
+                            "name": "Keras",
+                            "size": 40
+                        }, {
+                            "name": "Tensorflow",
+                            "size": 80
+                        }, {
+                            "name": "Flask",
+                            "size": 40
+                        }, {
+                            "name": "Kafka",
+                            "size": 40
+                        }, {
+                            "name": "Scrapy",
+                            "size": 40
+                        }, {
+                            "name": "Requests",
+                            "size": 80
+                        },{
+                            "name": "Matplotlib",
+                            "size": 80
+                        },{
+                            "name": "Seaborn",
+                            "size": 40
+                        },{
+                            "name": "Numpy",
+                            "size": 40
+                        },{
+                            "name": "RabbitMQ",
+                            "size": 40
+                        }
+                    ]
+                }],
+                "size": 60
+        }, 
+        {
+            "name": "Hobbies",
             "children": [{
-                    "name": "Amazon Cloud",
-                    "size": 80
-                }, {
-                    "name": "Azure Cloud",
-                    "size": 80
-                }, {
-                    "name": "Functions",
-                    "size": 60
-                }, {
-                    "name": "Storages",
-                    "size": 60
-                }, {
-                    "name": "DataBricks",
-                    "size": 60
+                    "name": "Video Games",
+                    "size": 40
                 },
                 {
-                    "name": "Kubernetes",
-                    "size": 60
+                    "name": "Cycling",
+                    "size": 40
+                },
+                {
+                    "name": "Pubs with Friends",
+                    "size": 40
                 }
-            ]
-        }, {
-            "name": "Python",
-            "size": 40,
-            "children": [{
-                "name": "Jupyter",
-                "size": 40
-            }, {
-                "name": "Pandas",
-                "size": 40
-            }, {
-                "name": "PySpark",
-                "size": 40
-            }, {
-                "name": "Scikit-Learn",
-                "size": 60
-            }, {
-                "name": "Keras",
-                "size": 40
-            }, {
-                "name": "Tensorflow",
-                "size": 50
-            }, {
-                "name": "Flask",
-                "size": 40
-            }, {
-                "name": "Kafka",
-                "size": 40
-            }, {
-                "name": "Scrapy",
-                "size": 40
-            }, {
-                "name": "Requests",
-                "size": 40
-            }]
-        }],
-        "size": 60
-    }, {
-        "name": "Hobbies",
-        "children": [{
-                "name": "Video Games",
-                "size": 40
-            },
-            {
-                "name": "Cycling",
-                "size": 40
-            }
-        ],
-        "size": 40
-    }]
+            ],
+            "size": 40
+        }
+    ]
 }
