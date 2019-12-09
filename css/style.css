@@ -8,6 +8,7 @@ body {
     background: linear-gradient(135deg, rgba(3, 30, 48, 1) 0%, rgba(21, 80, 128, 1) 100%);
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#031e30', endColorstr='#155080', GradientType=1);
     color: white;
+    font-family: 'Roboto', sans-serif;
     min-height: 100vh;
 }
 

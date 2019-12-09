@@ -28,7 +28,7 @@
                 ]
             }, {
                 "name": "General Knowledges",
-                "size": 40,
+                "size": 120,
                 "children": [{
                         "name": "Docker",
                         "size": 40
@@ -116,10 +116,10 @@
                     "size": 40
                 }, {
                     "name": "RabbitMQ",
-                    "size": 40
+                    "size": 80
                 }]
             }],
-            "size": 60
+            "size": 300
         },
         {
             "name": "Hobbies",
@@ -133,10 +133,10 @@
                 },
                 {
                     "name": "Pubs with Friends",
-                    "size": 40
+                    "size": 80
                 },
                 {
-                    "name": "Make Speeches",
+                    "name": "Give lectures",
                     "size": 40
                 }
             ],
