@@ -115,6 +115,9 @@
                     "name": "Numpy",
                     "size": 40
                 }, {
+                    "name": "Pytorch",
+                    "size": 40
+                }, {
                     "name": "RabbitMQ",
                     "size": 80
                 }]

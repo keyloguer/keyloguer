@@ -49,7 +49,7 @@
 </head>
 
 <body class="container pt-5">
-    <div id="cabecalho">
+    <div id="cabecalho" class="d-print-block pdf">
         <h1 class="text-center">
             Daniel Pereira Zitei
         </h1>
@@ -57,15 +57,15 @@
             Data Scientist
         </h2>
     </div>
-    <ul id="menu" class="nav nav-tabs mt-5" role="tablist">
+    <ul id="menu" class="nav nav-tabs mt-5 d-print-none" role="tablist">
         <li id="link1" class="nav-item"><a class="nav-link  active" data-toggle="tab" href="#home">Home</a></li>
         <li id="link2" class="nav-item"><a class="nav-link " data-toggle="tab" href="#menu1"><span class="full-text">Skills & Hobbies</span><span class="short-text">S & H</span></a></li>
         <li id="link3" class="nav-item"><a class="nav-link " data-toggle="tab" href="#menu2"><span class="full-text">Curriculum & Projects</span><span class="short-text">C & P</span></a></li>
         <li id="link4" class="nav-item"><a class="nav-link " data-toggle="tab" href="#menu3">Contact</a></li>
     </ul>
 
-    <div class="tab-content">
-        <div id="home" class="tab-pane fade show  active" role="tabpanel" aria-labelledby="home-tab">
+    <div class="tab-content d-print-none">
+        <div id="home" class="tab-pane fade show active  d-print-none" role="tabpanel" aria-labelledby="home-tab">
             <div class="my-5">
                 <div class="row">
                     <div class="col-md-3">
@@ -74,7 +74,7 @@
                     <div class="col-md-7">
                         <h3>Daniel Pereira Zitei</h3>
                         <h4>Data Scientist</h4>
-                        <p class="text-justify">I was born in Santos on march 24, 1996. I'm graduating from <strong>FATEC-RL</strong> in Internet Sistems and currently working as a
+                        <p class="text-justify">I was born in Santos on march 24, 1996. I'm graduated from <strong>FATEC-RL</strong> in Internet Sistems and currently working as a
                             <strong>data scientist</strong>. I love playing video games, I give
                             <strong>lectures on artificial intelligence</strong> in my spare time and since I was a kid I've read about
                             <strong>science fiction</strong>, <strong>new tecnologies</strong> and <strong>artificial intelligence</strong>.
@@ -103,7 +103,7 @@
                 <h3>Curriculum Vitae</h3>
                 <h4 class="mt-5">Graduation</h4>
                 <p>
-                    I'm graduating from <strong>FATEC-RL</strong> in <strong>Internet Systems</strong> - <strong>2016</strong> - <strong>2019</strong>
+                    I'm graduated from <strong>FATEC-RL</strong> in <strong>Internet Systems</strong> - <strong>2016</strong> - <strong>2019</strong>
                 </p>
                 <p>
                     <strong>TCC</strong> - <strong>Feasibility analysis of mobile games using machine learning</strong>.
@@ -125,7 +125,6 @@
                         Curriculum Lattes
                     </a>
                 </h4>
-
                 <h4 class="mt-5">Lectures</h4>
                 <p><strong>Tecnology Week of FATEC Praia Grande 2019</strong> - Title: <strong>"How machine learns?"</strong></p>
                 <p><strong>Meetup Py013</strong> - Title: <strong>"How machine learns?"</strong></p>
@@ -139,12 +138,18 @@
                         <p class=" mt-4 text-justify">The image above is a link to my publication on Medium talking about my library <strong>Flask Middleware JWT</strong>.</p>
                     </div>
                 </div>
+                <h4 class="mt-5">Events</h4>
+                <p><strong>Workshop INTEL de Inteligência Artificial na FATEC Rubens Lara</strong> - <strong>2017</strong></p>
+                <p><strong>Principles for Artificial Intelligence: Towards a Humanistic Approach? UNESCO</strong> - 2019</p>
                 <h3 class="mt-5">Projects</h3>
                 <h4 class="mt-5">Nestor-GR</h4>
                 <p class="text-justify"><strong>Chabot</strong> application using the programming language <strong> Python </strong> and open-source framework <strong>Rasa</strong>. This project uses <strong>message queue</strong> for traffic the messages,<strong> micro-services</strong>                    api application using <strong>Flask</strong> for create new chatbots and <strong> grant authorization </strong> to the other micro-services.</p>
                 <p>
                     The developing uses <strong>Docker</strong> for provide unique developing enviorment for everyone, and the deploy was made with the orchestration of <strong>Kubernetes</strong>.
                 </p>
+                <h4 class="mt-5">Suzano Data Warehouse</h4>
+                <p class="text-justify">Analysis of 5 databases for the creation of a data warehouse. Creation of
+                    <stron>predictive models </stron>to predict the entry of ships in the bar and generation of dashboards for performance analysis of Suzano's port area.</p>
                 <h4 class="mt-5">Face Recognition</h4>
                 <p class="text-justify">Using <strong> DLib Landmarks Library </strong> and <strong>Deep Learning</strong> to create a model for face recognition on gate in, gate out, in a port company. For this project I use <strong>Euclidean distance of 68 points </strong>                    of human face like
                     <strong>the mandibular distance</strong>, <strong>eyebrow size</strong>, <strong>eyes area</strong>, <strong>mouth area</strong>, etc., for set the input layer of the neural network.</p>
@@ -187,6 +192,110 @@
             </div>
         </div>
     </div>
+    </div>
+    <div class="d-none d-print-block pdf">
+        <div class="row mt-5">
+            <div class="col-md-3">
+                <img src="img/eu.jpg" class="img-thumbnail">
+            </div>
+            <div class="col-md-7">
+                <p class="text-justify">I was born in Santos on march 24, 1996. I'm graduated from <strong>FATEC-RL</strong> in Internet Sistems and currently working as a
+                    <strong>data scientist</strong>. I love playing video games, I give
+                    <strong>lectures on artificial intelligence</strong> in my spare time and since I was a kid I've read about
+                    <strong>science fiction</strong>, <strong>new tecnologies</strong> and <strong>artificial intelligence</strong>.
+                </p>
+            </div>
+        </div>
+        <div class="my-5">
+            <h3 class="mt-5">Graduation</h4>
+                <p>
+                    I'm graduated from <strong>FATEC-RL</strong> in <strong>Internet Systems</strong> - <strong>2016</strong> - <strong>2019</strong>
+                </p>
+                <p>
+                    <strong>TCC</strong> - <strong>Feasibility analysis of mobile games using machine learning</strong>.
+                </p>
+                <h3 class="mt-5">Certificates</h3>
+                <p><strong>3º Big Data Event</strong> by <strong>ICMC USP 2019</strong> - <strong>Complete Course</strong>.</p>
+                <p>Participation in <strong>Brazilian Robotics Olympiad of 2010</strong> - <strong>Place: 1º</strong>.</p>
+                <p><strong>Game Developing</strong> with <strong>DarkBasic Pro (32 hour)</strong>
+                </p>
+                <h3 class="mt-5">Computer Knowledges</h3>
+                <p>Amazon Cloud, Amazon Cloud, Azure Cloud, Functions, Storages, DataBricks, Kubernetes, Docker, Faas, Saas, Paas, Statistics, Linux, Star Schema Modeling, Hadoop, Postgres, Oracle, MongoDB, SQLite, Jupyter, Pandas, PySpark, Scikit-Learn,
+                    Keras, Tensorflow, Flask, Kafka, Scrapy, Requests, Matplotlib, Seaborn, Numpy, PyTorch, RabbitMQ
+                </p>
+                <h3 class="mt-5">Professional Works</h3>
+                <p>
+                    <strong>EQUIPE WEB</strong> - PHP Backend Developer - <strong>2018 - 2019</strong>
+                </p>
+                <p>
+                    <strong>ModalGR</strong> - Data Scientist - <strong>2018 - Actual</strong>
+                </p>
+                <h3 class="mt-5">Curriculum Lattes</h3>
+                <p>
+                    http://lattes.cnpq.br/4297370249389689
+                </p>
+                <h3 class="mt-5">Lectures</h3>
+                <p><strong>Tecnology Week of FATEC Praia Grande 2019</strong> - Title: <strong>"How machine learns?"</strong></p>
+                <p><strong>Meetup Py013</strong> - Title: <strong>"How machine learns?"</strong></p>
+                <p></p><strong>AIFest 2019</strong> - Title: <strong>"Working with High Dimensionality Data"</strong></p>
+                <h3 class="mt-5">Medium Posts</h3>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p>
+                            https://medium.com/@daniel.zitei/flask-middleware-jwt-1ae476a360e6
+                        </p>
+                    </div>
+                </div>
+                <h3 class="mt-5 pt-4">Events</h3>
+                <p><strong>Workshop INTEL of Artificial Intelligence in FATEC Rubens Lara</strong> - <strong>2017</strong></p>
+                <p><strong>Principles for Artificial Intelligence: Towards a Humanistic Approach? - UNESCO</strong> - 2019</p>
+                <h3 class="mt-5">Projects</h3>
+                <h4 class="mt-5">Nestor-GR</h4>
+                <p class="text-justify"><strong>Chabot</strong> application using the programming language <strong> Python </strong> and open-source framework <strong>Rasa</strong>. This project uses <strong>message queue</strong> for traffic the messages,<strong> micro-services</strong>                    api application using <strong>Flask</strong> for create new chatbots and <strong> grant authorization </strong> to the other micro-services.</p>
+                <p>
+                    The developing uses <strong>Docker</strong> for provide unique developing enviorment for everyone, and the deploy was made with the orchestration of <strong>Kubernetes</strong>.
+                </p>
+                <h4 class="mt-5">Suzano Data Warehouse</h4>
+                <p class="text-justify">Analysis of 5 databases for the creation of a data warehouse. Creation of
+                    <stron>predictive models </stron>to predict the entry of ships in the bar and generation of dashboards for performance analysis of Suzano's port area.</p>
+                <h4 class="mt-5">Face Recognition</h4>
+                <p class="text-justify">Using <strong> DLib Landmarks Library </strong> and <strong>Deep Learning</strong> to create a model for face recognition on gate in, gate out, in a port company. For this project I use <strong>Euclidean distance of 68 points </strong>                    of human face like
+                    <strong>the mandibular distance</strong>, <strong>eyebrow size</strong>, <strong>eyes area</strong>, <strong>mouth area</strong>, etc., for set the input layer of the neural network.</p>
+                <h4 class="mt-5">Clockify ETL</h4>
+                <p class="text-justify">This
+                    <strong>ETL</strong> project that use the library
+                    <strong> Requests</strong> to
+                    <strong>scrape Clockify API</strong> and generate a Star Schema modeling to display in
+                    <strong> Power BI </strong> graphs with informations of employee's hours, characteristics, projects, etc.</p>
+                <p>To deploy in production I used
+                    <strong> Azure Functions </strong> and the database was the
+                    <strong> Azure BlobStorage</strong>.
+                </p>
+                <h4 class="mt-5">DP WORLD</h4>
+                <p>Software maintenance in a C# application</p>
+                <div class="my-5">
+                    <div class="row text-center">
+                        <div class="col-md-4 mb-5">
+                            <h3>Contact</h3>
+                            <img src="/img/linkedin.png" class="img-thumbnail mt-3" alt="My Homepage on linkedin">
+                            <p target="_blank">https://www.linkedin.com/in/daniel-pereira-zitei
+                            </p>
+                        </div>
+                        <div class="col-md-4  mb-5">
+                            <h3>Open Projects</h3>
+                            <img src="/img/git.png" class="img-thumbnail mt-3" alt="My Homepage on github">
+                            <p>https://github.com/keyloguer
+                            </p>
+                        </div>
+                        <div class="col-md-4">
+                            <h3>Stack Overflow</h3>
+                            <img src="/img/stackoverflow.png" class="img-thumbnail mt-3" alt="My Homepage on stackoverflow">
+                            <p>https://stackoverflow.com/users/9622398/daniel-pereira?tab=profile
+                            </p>
+                        </div>
+                    </div>
+                </div>
+        </div>
     </div>
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script>

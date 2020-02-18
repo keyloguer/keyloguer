@@ -12,6 +12,12 @@ body {
     min-height: 100vh;
 }
 
+@media print {
+    .pdf {
+        color: black !important;
+    }
+}
+
 .titulo {
     text-align: center;
 }
